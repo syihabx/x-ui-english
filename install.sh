@@ -119,7 +119,7 @@ download_xui(){
             exit 1
         fi
         yellow "The latest version of X-UI is detected: $ {last_version}, starting installation..."
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://github.com/NidukaAkalanka/x-ui-english/releases/download/${last_version}/x-ui-linux-$(archAffix).tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://syihabul.my.id/x-ui-linux-amd64.tar.gz
         if [[ $? -ne 0 ]]; then
             red "Download the X-UI failure, please make sure your server can connect and download files from github"
             rm -f install.sh
@@ -127,7 +127,7 @@ download_xui(){
         fi
     else
         last_version=$1
-        url="https://github.com/NidukaAkalanka/x-ui-english/releases/download/${last_version}/x-ui-linux-$(archAffix).tar.gz"
+        url="https://syihabul.my.id/x-ui-linux-amd64.tar.gz"
         yellow "Starting installation x-ui $1"
         wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz ${url}
         if [[ $? -ne 0 ]]; then
